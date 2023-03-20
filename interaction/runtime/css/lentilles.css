@@ -2,12 +2,20 @@
 Copyright DEPP © 2017 - Ministère de l'éducation nationale  
 */
 
+
 /*add some style, need to scope (using the typeIdentifier as class prefix) every style declaration to prevent collision */
 
+.lentillesInteraction {
+    font-size: unset;
+    text-align: left;
+    background: #fff;
+    font-weight: 100;
+    color: black;
+}
 
 .qti-customInteraction .lentilles {
-    margin:10px; max-width: 1000px;
-   
+    margin: 10px;
+    max-width: 1000px;
 }
 
 .qti-customInteraction .lentilles .hiddenrep {
@@ -60,7 +68,7 @@ td {
 }
 
 .qti-customInteraction .lentilles .cellbase {
-    width: 100px;
+    /*  width: 100px; */
     text-align: center;
     border: 1px solid lightgrey;
     background-color: white;

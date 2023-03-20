@@ -85,10 +85,23 @@ define([
          */
         getResponse: function() {
 
-            var $container = $(this.dom),
-                value = parseInt($container.find('input:checked').val()) || 0;
+            var i, j, celladdress, cellcontent;
+            var $container = $(this.dom), collum = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"], value, tablor = '',
+                graphor = $container.find('.repgraphor').text();
 
-            return { base: { integer: value } };
+            for (i = 0; i < collum.length; i++) {
+
+                for (j = 1; j < 12; j++) {
+                    celladdress = collum[i] + j;
+                    cellcontent = $container.find("." + celladdress).text();
+                    if (cellcontent !== ' ') { tablor = tablor + celladdress + ':' + cellcontent + ','; }
+
+                }
+            }
+
+            value = '{"Tableur":"' + tablor + '","graphique" :' + graphor + ',"navigation":'+ $container.find('.navicount').text() + '}'
+
+            return { base: { string: value } };
         },
         /**
          * Reverse operation performed by render()

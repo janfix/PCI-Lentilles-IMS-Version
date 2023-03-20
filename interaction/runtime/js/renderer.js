@@ -32,7 +32,6 @@ define([
 
         $lentils = $container.find(".lentils");
 
-        console.log(assets.lentils)
         $lentils.append($('<img>', {src: assets.lentils}).css({ top: 6, marginLeft: 12 }));
 
         stocker = 0;
@@ -99,7 +98,8 @@ define([
                     onlyOne = 1;
                     contenucell = $container.find(this).text();
                     if (contenucell === ' ') {
-                        $container.find(this).append("<input type='text' class='modactiv' />");
+                        
+                        $container.find(this).append("<input type='text' class='modactiv' style='width:100%; min-width:80px;'/>");
                         focusonme();
                         mouseleft(this);
                         $container.find(".modactiv").on('keyup', function (e) {
@@ -111,7 +111,8 @@ define([
                         jsontostring = JSON.stringify(jsontablor);
                         $container.find(".reptablor").html(jsontostring);
                     } else {
-                        $container.find(this).html("<input type='text' class='modactiv' value=" + contenucell + ">");
+                        
+                        $container.find(this).html("<input type='text' class='modactiv' style='width:100%; min-width:80px;'  value=" + contenucell + ">");
                         focusonme();
                         mouseleft(this);
                         $container.find(".modactiv").on('keyup', function (e) {

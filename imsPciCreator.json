@@ -1,0 +1,51 @@
+{
+    "model": "IMSPCI",
+    "typeIdentifier": "lentillesPCI",
+    "label": "Observation de la pousse des lentilles",
+    "short": "Lentilles",
+    "description": "Observation de la pousse des lentilles",
+    "version": "1.0.0",
+    "author": "Jean-Philippe Riviere",
+    "email": "jean.philippe.riviere@gmail.com",
+    "tags": [
+        "5eme",
+        "SVT"
+    ],
+    "response": {
+        "baseType": "string",
+        "cardinality": "single"
+    },
+    "runtime": {
+        "hook": "interaction/runtime/js/lentillesInteraction.min.js",
+        "modules": {
+            "lentillesPCI/interaction/runtime/js/lentillesInteraction.min": [
+                "interaction/runtime/js/lentillesInteraction.min.js"
+            ]
+        },
+        "src": [
+            "./interaction/runtime/js/lentillesInteraction.js",
+            "./interaction/runtime/js/renderer.js",
+            "./interaction/runtime/js/assets.js",
+            "./interaction/runtime/js/lib/raphael.min.js",
+            "./interaction/runtime/js/lib/raphael.json.js",
+            "./interaction/runtime/js/lib/rtext_edit.js"
+
+        ],
+        "stylesheets": [
+            "./interaction/runtime/css/lentilles.css"
+        ]
+    },
+    "creator": {
+        "icon": "./interaction/creator/img/icon.svg",
+        "hook": "./imsPciCreator.min.js",
+        "src": [
+            "./imsPciCreator.js",
+            "./interaction/creator/tpl/markup.tpl",
+            "./interaction/creator/tpl/propertiesForm.tpl",
+            "./interaction/creator/widget/Widget.js",
+            "./interaction/creator/widget/states/states.js",
+            "./interaction/creator/widget/states/Question.js",
+            "./interaction/creator/widget/states/Answer.js"
+        ]
+    }
+}
