@@ -9,13 +9,13 @@ If not, download the PCI, create a ZIP with the ImsPciCreator file at the root l
 ## Description
 This PCI presents 2 activities. 
 1. Based on an observation, the student has to create a complete spreadsheet, organizing clearly the informations.
-2. On the same date, the student has to create a simple graph (curve)
+2. On the same data, the student has to create a simple graph (curve)
 
 ## Results
 The PCI collects data to verify if and how the elements were used : 
 
 The results are in JSON format.
-<br/> it is storing the spreadsheet under a JSON string : Tableur.C4.SomeContentWrittenbyStudent
+<br/> it is storing the spreadsheet under a JSON string : Tableur.C4.SomeContentWrittenbyStudent (C4 is the cell address)
 <br/> It is also storing the graph under the domain name : graphique. This JSON string can be regenerated has a real graph
 <br/> Navigation : count how many times the studing has changer of activity : .navigation = 2
 
